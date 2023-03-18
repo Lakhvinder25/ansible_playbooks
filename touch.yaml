@@ -1,0 +1,9 @@
+---
+- name: this is a demo file to create file on servers
+  hosts: server1
+  become: true
+  tasks:
+    - name: create a file
+      file:
+        path: /home/ubuntu/server1.txt
+        state: touch
